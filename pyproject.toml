@@ -1,0 +1,22 @@
+[project]
+name = "youtubeinsights-mcp-server"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "dabidstudio", email = "dabidstudio08@gmail.com" }
+]
+requires-python = ">=3.11"
+dependencies = [
+    "httpx>=0.28.1",
+    "mcp>=1.6.0",
+    "python-dotenv>=1.1.0",
+    "youtube-transcript-api>=1.0.3",
+]
+
+[project.scripts]
+youtubeinsights-mcp-server = "youtubeinsights_mcp_server:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
