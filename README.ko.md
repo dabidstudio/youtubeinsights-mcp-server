@@ -1,5 +1,5 @@
 # YouTube Insights MCP Server
-[![smithery badge](https://smithery.ai/badge/youtube-insights-mcp-server)](https://smithery.ai/server/youtube-insights-mcp-server)
+[![PyPI version](https://badge.fury.io/py/youtubeinsights-mcp-server.svg)](https://pypi.org/project/youtubeinsights-mcp-server/)
 
 YouTube 동영상에서 인사이트를 추출할 수 있는 Model Context Protocol (MCP) 서버입니다. 자막 파싱, 키워드 기반 동영상 검색, 채널 정보 조회 등의 기능을 제공합니다.
 

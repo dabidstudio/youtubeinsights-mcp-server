@@ -1,5 +1,5 @@
 # YouTube Insights MCP Server
-[![smithery badge](https://smithery.ai/badge/@dabidstudio/youtubeinsights-mcp-server)](https://smithery.ai/server/@dabidstudio/youtubeinsights-mcp-server)
+
 
 A Model Context Protocol (MCP) server that enables insight extraction from YouTube videos, including subtitle parsing, keyword-based video discovery, and channel info retrieval.
 
@@ -10,6 +10,17 @@ A Model Context Protocol (MCP) server that enables insight extraction from YouTu
 - Retrieve channel info and latest videos from any YouTube video URL
 - FastMCP-based server integration for easy deployment
 - MCP Tools for seamless agent workflows
+
+
+### Exmaple Use Caes
+
+1. **Finding Trending Videos and Summarizing**  
+<img src="https://github.com/user-attachments/assets/60a97619-13cf-4aba-807e-0fad0a4f3b42" width="480"/>
+
+2. **Analyzing a Channel's Recent Performance**  
+<img src="https://github.com/user-attachments/assets/4f35a716-0c92-4368-8ba5-0b564613aae0" width="480"/>
+
+
 
 ## Installation
 
