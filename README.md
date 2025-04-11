@@ -20,7 +20,7 @@ A Model Context Protocol (MCP) server that enables insight extraction from YouTu
 
 When using [`uvx`](https://docs.astral.sh/uv/guides/tools/), no specific installation is needed.
 
-Add the following configuration to your MCP settings file (e.g., `cline_mcp_settings.json` for Claude Desktop):
+Add the following configuration to your MCP settings file (e.g., `claude_desktop_config.json` for Claude Desktop):
 
 ```json
 {
@@ -45,24 +45,24 @@ Add the following configuration to your MCP settings file (e.g., `cline_mcp_sett
    ```
 3. Copy `.env.example` to `.env` and fill in your youtube data api credentials
 
-```json
-{
-  "mcpServers": {
-    "youtubeinsights": {
-      "command": "uv",
-      "args": [
-        "--directory",
-        "path/to/youtubeinsights-mcp-server",
-        "run",
-        "youtubeinsights-mcp-server"
-      ],
-      "env": {
-        "YOUTUBE_API_KEY": "your-api-key",
+    ```json
+    {
+      "mcpServers": {
+        "youtubeinsights": {
+          "command": "uv",
+          "args": [
+            "--directory",
+            "path/to/youtubeinsights-mcp-server",
+            "run",
+            "youtubeinsights-mcp-server"
+          ],
+          "env": {
+            "YOUTUBE_API_KEY": "your-api-key",
+          }
+        }
       }
     }
-  }
-}
-```
+    ```
 
 ## Available MCP Tools
 

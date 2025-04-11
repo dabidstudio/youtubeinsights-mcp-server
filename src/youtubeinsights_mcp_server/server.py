@@ -16,39 +16,31 @@ YOUTUBE_API_URL = 'https://www.googleapis.com/youtube/v3'
 # Create an MCP server
 mcp = FastMCP("youtube_agent_server")
 
-### Tool 1: 유튜브 영상 URL에 대한 자막을 가져옵니다.
 @mcp.tool()
 def get_youtube_transcript(url: str) -> str:
-    """ 유튜브 영상 URL에 대한 자막을 가져옵니다."""
-    
-    # 1. 유튜브 URL에서 비디오 ID를 추출합니다.
+    """Get the transcript of a YouTube video"""
     video_id_match = re.search(r"(?:v=|\/)([0-9A-Za-z_-]{11}).*", url)
     if not video_id_match:
-        raise ValueError("유효하지 않은 YouTube URL이 제공되었습니다")
+        raise ValueError("Invalid YouTube URL provided")
     video_id = video_id_match.group(1)
     
     languages = ["ko", "en"]
-    # 2. youtube_transcript_api를 사용하여 자막을 가져옵니다.
     try:
         transcript_list = YouTubeTranscriptApi.get_transcript(video_id, languages=languages)
         
-        # 3. 자막 목록의 'text' 부분을 하나의 문자열로 결합합니다.
         transcript_text = " ".join([entry["text"] for entry in transcript_list])
         return transcript_text
 
     except Exception as e:
-        raise RuntimeError(f"비디오 ID '{video_id}'에 대한 자막을 찾을 수 없거나 사용할 수 없습니다. {e}")
+        raise RuntimeError(f"Could not find or use the transcript for video ID '{video_id}'. {e}")
 
-### Tool 2: 유튜브에서 특정 키워드로 동영상을 검색하고 세부 정보를 가져옵니다
 @mcp.tool()
 def search_youtube_videos(query: str):
-    """유튜브에서 특정 키워드로 동영상을 검색하고 세부 정보를 가져옵니다"""
+    """Search YouTube videos by keyword and retrieve detailed information"""
     try:
-        # 1. 동영상 검색
         max_results: int = 20
         search_url = (f"{YOUTUBE_API_URL}/search?part=snippet&q={quote(query)}"
                       f"&type=video&maxResults={max_results}&key={YOUTUBE_API_KEY}")
-        print(f"Searching YouTube with URL: {search_url}")
 
         search_response = httpx.get(search_url)
         search_response.raise_for_status()
@@ -61,7 +53,6 @@ def search_youtube_videos(query: str):
 
         video_details_url = (f"{YOUTUBE_API_URL}/videos?part=snippet,statistics&id={','.join(video_ids)}"
                              f"&key={YOUTUBE_API_KEY}")
-        print(f"영상 정보 가져오는 중: {video_details_url}")
         details_response = httpx.get(video_details_url)
         details_response.raise_for_status()
         details_data = details_response.json()
@@ -97,10 +88,9 @@ def search_youtube_videos(query: str):
         print(f"Error: {e}")
         return []
 
-### Tool 3: YouTube 동영상 URL로부터 채널 정보와 최근 5개의 동영상을 가져옵니다
 @mcp.tool()
 def get_channel_info(video_url: str) -> dict:
-    """YouTube 동영상 URL로부터 채널 정보와 최근 5개의 동영상을 가져옵니다"""
+    """Get channel information and 10 recent videos from a YouTube video URL"""
     def extract_video_id(url):
         match = re.search(r"(?:v=|\/)([0-9A-Za-z_-]{11})", url)
         return match.group(1) if match else None
@@ -116,7 +106,7 @@ def get_channel_info(video_url: str) -> dict:
             ns = {'atom': 'http://www.w3.org/2005/Atom'}
             videos = []
 
-            for entry in root.findall('.//atom:entry', ns)[:5]:
+            for entry in root.findall('.//atom:entry', ns)[:10]:
                 title = entry.find('./atom:title', ns).text
                 link = entry.find('./atom:link', ns).attrib['href']
                 published = entry.find('./atom:published', ns).text
@@ -162,7 +152,7 @@ def get_channel_info(video_url: str) -> dict:
 # -------------- ENTRY POINT -------------- #
 
 def main():
-    print("Starting YouTube MCP Server")
+    print("Starting YouTube MCP Server ")
     mcp.run()
 
 
