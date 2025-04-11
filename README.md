@@ -1,7 +1,5 @@
-
-
 # YouTube Insights MCP Server
-[![smithery badge](https://smithery.ai/badge/youtube-insights-mcp-server)](https://smithery.ai/server/youtube-insights-mcp-server)
+[![PyPI version](https://badge.fury.io/py/youtubeinsights-mcp-server.svg)](https://pypi.org/project/youtubeinsights-mcp-server/)
 
 A Model Context Protocol (MCP) server that enables insight extraction from YouTube videos, including subtitle parsing, keyword-based video discovery, and channel info retrieval.
 
