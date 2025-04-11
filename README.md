@@ -1,7 +1,5 @@
-
-
 # YouTube Insights MCP Server
-[![smithery badge](https://smithery.ai/badge/youtube-insights-mcp-server)](https://smithery.ai/server/youtube-insights-mcp-server)
+[![smithery badge](https://smithery.ai/badge/@dabidstudio/youtubeinsights-mcp-server)](https://smithery.ai/server/@dabidstudio/youtubeinsights-mcp-server)
 
 A Model Context Protocol (MCP) server that enables insight extraction from YouTube videos, including subtitle parsing, keyword-based video discovery, and channel info retrieval.
 
@@ -15,6 +13,14 @@ A Model Context Protocol (MCP) server that enables insight extraction from YouTu
 
 ## Installation
 
+
+### Installing via Smithery
+
+To install youtubeinsights-mcp-server for Claude Desktop automatically via [Smithery](https://smithery.ai/server/@dabidstudio/youtubeinsights-mcp-server):
+
+```bash
+npx -y @smithery/cli install @dabidstudio/youtubeinsights-mcp-server --client claude
+```
 
 ### Using uvx (recommended)
 
