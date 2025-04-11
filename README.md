@@ -14,11 +14,11 @@ A Model Context Protocol (MCP) server that enables insight extraction from YouTu
 
 ### Exmaple Use Caes
 
-1. finding trending videos and summarizing
-![Cursor_S5aKZzzr7A](https://github.com/user-attachments/assets/60a97619-13cf-4aba-807e-0fad0a4f3b42)
+1. **Finding Trending Videos and Summarizing**  
+<img src="https://github.com/user-attachments/assets/60a97619-13cf-4aba-807e-0fad0a4f3b42" width="480"/>
 
-2. analyzing a channel's recent performance
-![Cursor_fI19kUqSxC](https://github.com/user-attachments/assets/4f35a716-0c92-4368-8ba5-0b564613aae0)
+2. **Analyzing a Channel's Recent Performance**  
+<img src="https://github.com/user-attachments/assets/4f35a716-0c92-4368-8ba5-0b564613aae0" width="480"/>
 
 
 
