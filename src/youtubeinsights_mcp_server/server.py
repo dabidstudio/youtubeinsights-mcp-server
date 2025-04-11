@@ -159,6 +159,12 @@ def get_channel_info(video_url: str) -> dict:
         'videos': fetch_recent_videos(channel_id)
     }
 
-if __name__ == "__main__":
-    print("Starting MCP server...")
+# -------------- ENTRY POINT -------------- #
+
+def main():
+    print("✅ Starting YouTube MCP Server")
     mcp.run()
+
+
+if __name__ == "__main__":
+    main()
