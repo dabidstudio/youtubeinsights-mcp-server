@@ -11,6 +11,17 @@ A Model Context Protocol (MCP) server that enables insight extraction from YouTu
 - FastMCP-based server integration for easy deployment
 - MCP Tools for seamless agent workflows
 
+
+### Exmaple Use Caes
+
+1. finding trending videos and summarizing
+![Cursor_S5aKZzzr7A](https://github.com/user-attachments/assets/60a97619-13cf-4aba-807e-0fad0a4f3b42)
+
+2. analyzing a channel's recent performance
+![Cursor_fI19kUqSxC](https://github.com/user-attachments/assets/4f35a716-0c92-4368-8ba5-0b564613aae0)
+
+
+
 ## Installation
 
 
