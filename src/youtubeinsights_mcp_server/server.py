@@ -162,7 +162,7 @@ def get_channel_info(video_url: str) -> dict:
 # -------------- ENTRY POINT -------------- #
 
 def main():
-    print("✅ Starting YouTube MCP Server")
+    print("Starting YouTube MCP Server")
     mcp.run()
 
 
