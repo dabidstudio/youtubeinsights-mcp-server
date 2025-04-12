@@ -12,13 +12,18 @@ A Model Context Protocol (MCP) server that enables insight extraction from YouTu
 - MCP Tools for seamless agent workflows
 
 
-### Exmaple Use Caes
+### Example usecases
 
-1. **Finding Trending Videos and Summarizing**  
+
+<details>
+<summary>**Finding Trending Videos and Summarizing**</summary>
 <img src="https://github.com/user-attachments/assets/60a97619-13cf-4aba-807e-0fad0a4f3b42" width="480"/>
-
-2. **Analyzing a Channel's Recent Performance**  
+</details>
+ 
+<details>
+<summary>**Analyzing a Channel's Recent Performance**</summary>
 <img src="https://github.com/user-attachments/assets/4f35a716-0c92-4368-8ba5-0b564613aae0" width="480"/>
+</details>
 
 
 
