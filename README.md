@@ -61,11 +61,8 @@ Add the following configuration to your MCP settings file (e.g., `claude_desktop
 ### Development Installation
 
 1. Clone this repository
-2. Install dependencies:
-   ```bash
-   uv venv
-   ```
-3. Copy `.env.example` to `.env` and fill in your youtube data api credentials
+
+2. Copy `.env.example` to `.env` and fill in your youtube data api credentials
 
     ```json
     {
