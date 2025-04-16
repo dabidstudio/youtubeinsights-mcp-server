@@ -36,11 +36,9 @@ MCP 설정 파일(예: Claude Desktop의 경우 `claude_desktop_config.json`)에
 ### 개발 환경 설치
 
 1. 저장소 클론
-2. 의존성 설치:
-   ```bash
-   uv venv
+
    ```
-3. `.env.example` 파일을 `.env`로 복사하고 YouTube Data API 인증 정보 입력
+2. `.env.example` 파일을 `.env`로 복사하고 YouTube Data API 인증 정보 입력
 
     ```json
     {
