@@ -62,7 +62,7 @@ def search_youtube_videos(query: str):
             snippet = item.get('snippet', {})
             statistics = item.get('statistics', {})
             thumbnails = snippet.get('thumbnails', {})
-            high_thumbnail = thumbnails.get('high', {}) 
+            medium_thumbnail = thumbnails.get('medium', {}) 
             view_count = statistics.get('viewCount')
             like_count = statistics.get('likeCount')
 
@@ -71,7 +71,7 @@ def search_youtube_videos(query: str):
                 "publishedDate": snippet.get('publishedAt', ''),
                 "channelName": snippet.get('channelTitle', 'N/A'),
                 "channelId": snippet.get('channelId', ''),
-                "thumbnailUrl": high_thumbnail.get('url', ''),
+                "thumbnailUrl": medium_thumbnail.get('url', ''),
                 "viewCount": int(view_count) if view_count is not None else None,
                 "likeCount": int(like_count) if like_count is not None else None,
                 "url": f"https://www.youtube.com/watch?v={item.get('id', '')}",

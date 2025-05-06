@@ -94,4 +94,4 @@ Add the following configuration to your MCP settings file (e.g., `claude_desktop
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+The project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
