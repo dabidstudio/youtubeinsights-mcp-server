@@ -1,5 +1,3 @@
-[![MseeP.ai Security Assessment Badge](https://mseep.net/pr/dabidstudio-youtubeinsights-mcp-server-badge.png)](https://mseep.ai/app/dabidstudio-youtubeinsights-mcp-server)
-
 # YouTube Insights MCP Server
 
 
